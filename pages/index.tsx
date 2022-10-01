@@ -1,8 +1,8 @@
 import { Flex } from '@chakra-ui/react'
 import { useEthers } from '@usedapp/core'
 import type { GetStaticProps } from 'next'
-import { createClient } from '@supabase/supabase-js'
 import Card, { CardProps } from '../components/Card'
+import { supabaseAdmin } from '../utils/supabaseClient'
 
 type PostsProps = {
   posts: [post: CardProps]
@@ -27,11 +27,6 @@ const Home = ({ posts }: PostsProps) => {
 export default Home
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  const supabaseAdmin = createClient(
-    process.env.NEXT_PUBLIC_SUPABASE_URL || '',
-    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || ''
-  )
-
   const { data } = await supabaseAdmin.from('posts').select('*').order('id')
 
   return {
