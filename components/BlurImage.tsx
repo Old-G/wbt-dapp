@@ -29,8 +29,8 @@ const BlurImage = ({ src, alt }: BlurImageProps) => {
         layout='fill'
         objectFit='cover'
         placeholder='blur'
-        width={700}
-        height={600}
+        // width={700}
+        // height={600}
         quality={95}
         blurDataURL={rgbDataURL(41, 45, 50)}
       />

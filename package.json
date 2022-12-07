@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@apollo/client": "^3.7.1",
     "@chakra-ui/react": "^2.3.4",
     "@emotion/react": "^11",
     "@emotion/styled": "^11",
@@ -16,11 +17,12 @@
     "@supabase/supabase-js": "^2.0.0-rc.10",
     "@types/react-redux": "^7.1.24",
     "@usedapp/core": "^1.1.5",
-    "ethers": "^5.7.1",
+    "ethers": "^5.7.2",
     "framer-motion": "^6",
-    "next": "12.3.1",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
+    "graphql": "^16.6.0",
+    "next": "^13.0.6",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-redux": "^8.0.4"
   },
   "devDependencies": {
@@ -28,7 +30,7 @@
     "@types/react": "18.0.21",
     "@types/react-dom": "18.0.6",
     "eslint": "8.24.0",
-    "eslint-config-next": "12.3.1",
+    "eslint-config-next": "^13.0.6",
     "typescript": "4.8.3"
   }
 }

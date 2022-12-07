@@ -19,6 +19,12 @@ const Card = ({
   username,
   description,
   price,
+
+  avatarUrl,
+  name,
+  bio,
+  handle,
+  stats,
 }: CardProps) => {
   return (
     <Box
@@ -29,9 +35,7 @@ const Card = ({
       maxWidth='700px'
       w='full'
     >
-      <Link href={href}>
-        <BlurImage src={imageSrc} alt={alt} />
-      </Link>
+      <BlurImage src={avatarUrl} alt={'avatar'} />
 
       <Box p='6'>
         <Box display='flex' alignItems='baseline'>
@@ -46,19 +50,21 @@ const Card = ({
             textTransform='uppercase'
             ml='2'
           >
-            {description}
+            {bio}
           </Box>
         </Box>
 
-        <Box
-          mt='1'
-          fontWeight='semibold'
-          as='h4'
-          lineHeight='tight'
-          noOfLines={1}
-        >
-          {username}
-        </Box>
+        <Link href={`/${handle}`}>
+          <Box
+            mt='1'
+            fontWeight='semibold'
+            as='h4'
+            lineHeight='tight'
+            noOfLines={1}
+          >
+            {name}
+          </Box>
+        </Link>
 
         <Box>
           {price}
@@ -66,6 +72,7 @@ const Card = ({
             $
           </Box>
         </Box>
+        <Box>{stats.totalFollowers} followers</Box>
       </Box>
     </Box>
   )

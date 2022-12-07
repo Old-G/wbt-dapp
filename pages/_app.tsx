@@ -18,13 +18,13 @@ const config: Config = {
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <Provider store={store}>
-      <DAppProvider config={config}>
-        <ChakraProvider>
-          <Layout>
-            <Component {...pageProps} />
-          </Layout>
-        </ChakraProvider>
-      </DAppProvider>
+      {/* <DAppProvider config={config}> */}
+      <ChakraProvider>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </ChakraProvider>
+      {/* </DAppProvider> */}
     </Provider>
   )
 }
